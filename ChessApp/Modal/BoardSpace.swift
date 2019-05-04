@@ -8,22 +8,23 @@
 
 import UIKit
 
-class BoardSpace: UIView{
+class BoardSpace: UIView {
     
     var occupyingPiece: ChessPiece!
     var occupyingPieceImage: UIImageView!
     
     var x : Int
     var y : Int
- 
+    var size : CGFloat
     var tapEventBlock : ((BoardSpace)->())?
     
-    init(xPixel:CGFloat, yPixel:CGFloat, fillWhite: Bool, tapEventHandler: ((BoardSpace)->())? ){
+    init(size: CGFloat, xPixel:CGFloat, yPixel:CGFloat, fillWhite: Bool, tapEventHandler: ((BoardSpace)->())? ){
         
-        self.x = Int(xPixel-2)/48
-        self.y = Int(yPixel-2)/48
+        self.x = Int(xPixel/size)
+        self.y = Int(yPixel/size)
+        self.size = size
         
-        super.init(frame: CGRect(x: xPixel, y: yPixel, width: CGFloat(49), height: CGFloat(49)))
+        super.init(frame: CGRect(x: xPixel, y: yPixel, width: CGFloat(size - 1.0), height: CGFloat(size - 1.0)))
         backgroundColor = fillWhite ? UIColor.white : UIColor.gray
         
         tapEventBlock = tapEventHandler
@@ -37,7 +38,7 @@ class BoardSpace: UIView{
     func setPiece(chessPiece: ChessPiece){
         occupyingPiece = chessPiece
         if (occupyingPieceImage == nil){
-            occupyingPieceImage = UIImageView(frame: CGRect(x: CGFloat(5), y: CGFloat(5), width: CGFloat(40), height: CGFloat(40) ))
+            occupyingPieceImage = UIImageView(frame: CGRect(x: CGFloat(4), y: CGFloat(4), width: CGFloat(size - 8), height: CGFloat(size - 8)))
             self.addSubview(occupyingPieceImage)
         }
         occupyingPieceImage.image = chessPiece.pieceImage

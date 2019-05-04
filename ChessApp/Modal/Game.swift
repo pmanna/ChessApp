@@ -65,7 +65,22 @@ class ChessGame{
         self.whitePlayer = whitePlayerName
         self.blackPlayer = blackPlayerName
         self.iconSet = IconSet(iconSetName: iconSetName)
+        
+        initUMax()
+    }
     
+    /**
+     Changes which player's turn it is.
+     */
+    func newPlayerMove(){
+        if(playerTurn == .white){
+            playerTurn = .black
+            chessBoard?.currentPlayerTurnLabel.text = blackPlayer + "'s"
+        }
+        else{
+            playerTurn = .white
+            chessBoard?.currentPlayerTurnLabel.text = whitePlayer + "'s"
+        }
     }
 }
 

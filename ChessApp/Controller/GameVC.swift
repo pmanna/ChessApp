@@ -11,16 +11,20 @@ import UIKit
 class GameViewController: UIViewController {
 
     //board UIView from Main.storyboard
-    @IBOutlet weak var board: Board!
-    
+    @IBOutlet var board: Board!
+    @IBOutlet var playerLabel: UILabel!
+    @IBOutlet var turnLabel: UILabel!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
-        let game = ChessGame(whitePlayerName: "Player 1", blackPlayerName: "Player 2", iconSetName: "Maya")
+        let game = ChessGame(whitePlayerName: "Player 1", blackPlayerName: "Computer", iconSetName: "Maya")
         board.chessGame = game
         game.chessBoard = board
-        
+        playerLabel.text                = "Player 1"
+        board.currentPlayerTurnLabel    = playerLabel
+        board.turnLabel                 = turnLabel
         
     }
 

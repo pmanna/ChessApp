@@ -10,7 +10,6 @@
 		D7955FF5207DD21F00542083 /* extensionUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7955FF4207DD21F00542083 /* extensionUIView.swift */; };
 		D7955FF7207E0EDC00542083 /* Pawn.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7955FF6207E0EDC00542083 /* Pawn.swift */; };
 		D7A7F3B9207528AF007C3646 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A7F3B8207528AF007C3646 /* AppDelegate.swift */; };
-		D7A7F3BB207528AF007C3646 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A7F3BA207528AF007C3646 /* ViewController.swift */; };
 		D7A7F3BE207528AF007C3646 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7A7F3BC207528AF007C3646 /* Main.storyboard */; };
 		D7A7F3C0207528AF007C3646 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7A7F3BF207528AF007C3646 /* Assets.xcassets */; };
 		D7A7F3C3207528AF007C3646 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7A7F3C1207528AF007C3646 /* LaunchScreen.storyboard */; };
@@ -19,6 +18,12 @@
 		D7A7F3D120753C26007C3646 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A7F3D020753C26007C3646 /* Game.swift */; };
 		D7A7F3D32077AA43007C3646 /* GameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A7F3D22077AA43007C3646 /* GameVC.swift */; };
 		D7A7F3D52077C8A3007C3646 /* ChessPiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A7F3D42077C8A3007C3646 /* ChessPiece.swift */; };
+		D8F29A29227D9E3800EF5341 /* Knight.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F29A24227D9E3700EF5341 /* Knight.swift */; };
+		D8F29A2A227D9E3800EF5341 /* Rook.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F29A25227D9E3700EF5341 /* Rook.swift */; };
+		D8F29A2B227D9E3800EF5341 /* Bishop.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F29A26227D9E3700EF5341 /* Bishop.swift */; };
+		D8F29A2C227D9E3800EF5341 /* King.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F29A27227D9E3700EF5341 /* King.swift */; };
+		D8F29A2D227D9E3800EF5341 /* Queen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F29A28227D9E3800EF5341 /* Queen.swift */; };
+		D8F29A44227DD9E500EF5341 /* MicroMax.c in Sources */ = {isa = PBXBuildFile; fileRef = D8F29A43227DD9E500EF5341 /* MicroMax.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,7 +31,6 @@
 		D7955FF6207E0EDC00542083 /* Pawn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pawn.swift; sourceTree = "<group>"; };
 		D7A7F3B5207528AF007C3646 /* ChessApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChessApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7A7F3B8207528AF007C3646 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D7A7F3BA207528AF007C3646 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D7A7F3BD207528AF007C3646 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D7A7F3BF207528AF007C3646 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D7A7F3C2207528AF007C3646 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -36,6 +40,14 @@
 		D7A7F3D020753C26007C3646 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		D7A7F3D22077AA43007C3646 /* GameVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameVC.swift; sourceTree = "<group>"; };
 		D7A7F3D42077C8A3007C3646 /* ChessPiece.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChessPiece.swift; sourceTree = "<group>"; };
+		D8F29A24227D9E3700EF5341 /* Knight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Knight.swift; sourceTree = "<group>"; };
+		D8F29A25227D9E3700EF5341 /* Rook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rook.swift; sourceTree = "<group>"; };
+		D8F29A26227D9E3700EF5341 /* Bishop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bishop.swift; sourceTree = "<group>"; };
+		D8F29A27227D9E3700EF5341 /* King.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = King.swift; sourceTree = "<group>"; };
+		D8F29A28227D9E3800EF5341 /* Queen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Queen.swift; sourceTree = "<group>"; };
+		D8F29A41227DD9E300EF5341 /* ChessApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ChessApp-Bridging-Header.h"; sourceTree = "<group>"; };
+		D8F29A42227DD9E500EF5341 /* MicroMax.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MicroMax.h; sourceTree = "<group>"; };
+		D8F29A43227DD9E500EF5341 /* MicroMax.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = MicroMax.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +66,11 @@
 			children = (
 				D7A7F3D42077C8A3007C3646 /* ChessPiece.swift */,
 				D7955FF6207E0EDC00542083 /* Pawn.swift */,
+				D8F29A26227D9E3700EF5341 /* Bishop.swift */,
+				D8F29A27227D9E3700EF5341 /* King.swift */,
+				D8F29A24227D9E3700EF5341 /* Knight.swift */,
+				D8F29A28227D9E3800EF5341 /* Queen.swift */,
+				D8F29A25227D9E3700EF5341 /* Rook.swift */,
 			);
 			path = ChessPiece;
 			sourceTree = "<group>";
@@ -78,6 +95,8 @@
 			isa = PBXGroup;
 			children = (
 				D7A7F3B8207528AF007C3646 /* AppDelegate.swift */,
+				D8F29A43227DD9E500EF5341 /* MicroMax.c */,
+				D8F29A42227DD9E500EF5341 /* MicroMax.h */,
 				D7A7F3D62077C8EA007C3646 /* Controller */,
 				D7A7F3D72077C8FF007C3646 /* Modal */,
 				D7955FF8207E0EE700542083 /* ChessPiece */,
@@ -85,6 +104,7 @@
 				D7A7F3BF207528AF007C3646 /* Assets.xcassets */,
 				D7A7F3C1207528AF007C3646 /* LaunchScreen.storyboard */,
 				D7A7F3C4207528AF007C3646 /* Info.plist */,
+				D8F29A41227DD9E300EF5341 /* ChessApp-Bridging-Header.h */,
 			);
 			path = ChessApp;
 			sourceTree = "<group>";
@@ -92,7 +112,6 @@
 		D7A7F3D62077C8EA007C3646 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				D7A7F3BA207528AF007C3646 /* ViewController.swift */,
 				D7A7F3D22077AA43007C3646 /* GameVC.swift */,
 			);
 			path = Controller;
@@ -136,12 +155,13 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "Student 3";
 				TargetAttributes = {
 					D7A7F3B4207528AF007C3646 = {
 						CreatedOnToolsVersion = 9.2;
-						ProvisioningStyle = Automatic;
+						LastSwiftMigration = 1010;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -183,12 +203,17 @@
 			files = (
 				D7A7F3D52077C8A3007C3646 /* ChessPiece.swift in Sources */,
 				D7A7F3CD20752C17007C3646 /* Board.swift in Sources */,
+				D8F29A2D227D9E3800EF5341 /* Queen.swift in Sources */,
 				D7A7F3D120753C26007C3646 /* Game.swift in Sources */,
-				D7A7F3BB207528AF007C3646 /* ViewController.swift in Sources */,
+				D8F29A29227D9E3800EF5341 /* Knight.swift in Sources */,
 				D7A7F3B9207528AF007C3646 /* AppDelegate.swift in Sources */,
 				D7A7F3D32077AA43007C3646 /* GameVC.swift in Sources */,
 				D7A7F3CF20753604007C3646 /* BoardSpace.swift in Sources */,
+				D8F29A2B227D9E3800EF5341 /* Bishop.swift in Sources */,
+				D8F29A2A227D9E3800EF5341 /* Rook.swift in Sources */,
 				D7955FF7207E0EDC00542083 /* Pawn.swift in Sources */,
+				D8F29A44227DD9E500EF5341 /* MicroMax.c in Sources */,
+				D8F29A2C227D9E3800EF5341 /* King.swift in Sources */,
 				D7955FF5207DD21F00542083 /* extensionUIView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -229,6 +254,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -236,6 +262,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -286,6 +313,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -293,6 +321,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -326,13 +355,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = KJPUKCUYN4;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 8A9228H6RE;
 				INFOPLIST_FILE = ChessApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Diku.ChessApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				PROVISIONING_PROFILE_SPECIFIER = WildcardDev;
+				SWIFT_OBJC_BRIDGING_HEADER = "ChessApp/ChessApp-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -341,13 +374,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = KJPUKCUYN4;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 8A9228H6RE;
 				INFOPLIST_FILE = ChessApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Diku.ChessApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				PROVISIONING_PROFILE_SPECIFIER = WildcardDev;
+				SWIFT_OBJC_BRIDGING_HEADER = "ChessApp/ChessApp-Bridging-Header.h";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
