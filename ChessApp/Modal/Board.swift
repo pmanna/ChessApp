@@ -115,26 +115,48 @@ class Board: UIView{
         for column in 0..<8{
             var columnSpace = [BoardSpace]()
             whiteFill = !whiteFill
-           
-            for row in 0..<8{
+            
+            for row in 0..<8 {
                 let boardSpace = BoardSpace(size: squareSize,
                                             xPixel: CGFloat(column) * squareSize,
                                             yPixel: CGFloat(row) * squareSize,
-                                            fillWhite: whiteFill){
+                                            fillWhite: whiteFill)
+                {
                     
                     // This is by definition the Event Tap Listener for our Chess Board Game
                     // When users tap to select, deselect, and move the chess piece(s)
                     space in
-                                                self.handleMove(space: space)
-               }
+                    self.handleMove(space: space)
+                }
                 
                 addSubview(boardSpace)
                 whiteFill = !whiteFill
-            
+                
                 columnSpace.append(boardSpace)
             }
+            
+            boardSpaces.append(columnSpace)
+        }
+    }
+    
+    func letComputerMove() {
+        let UMaxMove    = UnsafeMutablePointer<Int8>.allocate(capacity: 40)
         
-                boardSpaces.append(columnSpace)
+        getUMaxMove(UMaxMove)
+        
+        let autoMove = String(cString: UMaxMove)
+        let startStr = String(autoMove[...autoMove.index(autoMove.startIndex, offsetBy: 1)])
+        let endStr = String(autoMove[autoMove.index(autoMove.startIndex, offsetBy: 2)...])
+        
+        if let space   = self.stringToBoardSpace(str: startStr) {
+            self.handleMove(space: space)
+            DispatchQueue.main.async {
+                if let space = self.stringToBoardSpace(str: endStr) {
+                    self.handleMove(space: space)
+                   
+                    NotificationCenter.default.post(name: MovePieceNotification, object: "\(autoMove)\r\n")
+                }
+            }
         }
     }
     
@@ -169,23 +191,9 @@ class Board: UIView{
                 if isWhite {
                     inputPlayerMove("\(startStr)\(endStr)".cString(using: .utf8))
                     
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-                        let UMaxMove    = UnsafeMutablePointer<Int8>.allocate(capacity: 40)
-                        
-                        getUMaxMove(UMaxMove)
-                        
-                        let autoMove = String(cString: UMaxMove)
-                        let startStr = String(autoMove[...autoMove.index(autoMove.startIndex, offsetBy: 1)])
-                        let endStr = String(autoMove[autoMove.index(autoMove.startIndex, offsetBy: 2)...])
-                        
-                        if let space   = self.stringToBoardSpace(str: startStr) {
-                            self.handleMove(space: space)
-                            DispatchQueue.main.async {
-                                if let space = self.stringToBoardSpace(str: endStr) {
-                                    self.handleMove(space: space)
-                                }
-                            }
-                        }
+                    // Write to BLE device
+                    DispatchQueue.main.async {
+                        NotificationCenter.default.post(name: MovePieceNotification, object: "\(startStr)\(endStr)\r\n")
                     }
                 }
                 
@@ -201,12 +209,11 @@ class Board: UIView{
                 }
                 
                 if occupant != nil{ // An enemy has been destroyed
-                    if occupant is Queen && (occupant as! Queen).takenOverPawnImage != nil{
-//                     chessGame.displayCapturedPiece(piece: Pawn(image: (occupant as! Queen).takenOverPawnImage,
-//                                                                                    color: .White,
-//                                                                                    enPassantEventHandler: enPassantBlock))
-                    }
-                    else{
+                    if let queenOccupant = occupant as? Queen, queenOccupant.takenOverPawnImage != nil{
+//                     chessGame.displayCapturedPiece(piece: Pawn(image: queenOccupant.takenOverPawnImage,
+//                                                                color: .White,
+//                                                                enPassantEventHandler: enPassantBlock))
+                    } else {
 //                      chessGame.displayCapturedPiece(piece: occupant!)
                         if occupant is King {
                             if chessGame!.playerTurn == .white{
@@ -215,15 +222,14 @@ class Board: UIView{
                                 currentPlayerTurnLabel.text = chessGame!.blackPlayer
                             }
                             turnLabel.text = "wins!"
-//                          chessGame.gameWindow.title += " - (\(currentPlayerTurnLabel.stringValue) wins!)"
                             gameOver = true
                             clearHighlight()
                             return
                         }
                     }
                 }
-                if lastPieceMoved != nil && lastPieceMoved is Pawn {
-                    (lastPieceMoved as! Pawn).justMadeDoubleStep = false
+                if let pieceMoved = lastPieceMoved as? Pawn {
+                    pieceMoved.justMadeDoubleStep = false
                 }
                 lastPieceMoved = space.occupyingPiece
                 chessGame!.newPlayerMove()

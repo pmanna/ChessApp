@@ -24,25 +24,45 @@
                                     <constraint firstAttribute="width" secondItem="BIb-TI-mZu" secondAttribute="height" multiplier="1:1" id="vP9-Ek-wLe"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GKL-Qj-Coa">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GKL-Qj-Coa">
                                 <rect key="frame" x="16" y="525" width="343" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="U62-Hf-uDW"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="turn" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Dk-xz-fln">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="turn" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Dk-xz-fln">
                                 <rect key="frame" x="16" y="554" width="343" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="ce8-tE-BQ6"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pgn-cR-ZTS">
+                                <rect key="frame" x="16" y="86" width="16" height="16"/>
+                                <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="16" id="3hD-1x-NEE"/>
+                                    <constraint firstAttribute="height" constant="16" id="lbi-Sp-Czs"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="pgn-cR-ZTS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="0Vu-Q7-1oq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="GKL-Qj-Coa" secondAttribute="trailing" constant="16" id="0r4-04-GAu"/>
+                            <constraint firstItem="4Dk-xz-fln" firstAttribute="top" secondItem="GKL-Qj-Coa" secondAttribute="bottom" constant="8" id="FC8-Vh-XKg"/>
+                            <constraint firstItem="4Dk-xz-fln" firstAttribute="leading" secondItem="GKL-Qj-Coa" secondAttribute="leading" id="N81-15-58X"/>
+                            <constraint firstItem="BIb-TI-mZu" firstAttribute="top" secondItem="pgn-cR-ZTS" secondAttribute="bottom" constant="48" id="QEX-ss-7Pe"/>
+                            <constraint firstItem="GKL-Qj-Coa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="ZTo-0N-Bf5"/>
+                            <constraint firstItem="4Dk-xz-fln" firstAttribute="trailing" secondItem="GKL-Qj-Coa" secondAttribute="trailing" id="eUZ-pL-mSu"/>
                             <constraint firstItem="BIb-TI-mZu" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="fHC-cG-XQh"/>
                             <constraint firstItem="BIb-TI-mZu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kDV-Vq-Xef"/>
+                            <constraint firstItem="GKL-Qj-Coa" firstAttribute="top" secondItem="BIb-TI-mZu" secondAttribute="bottom" constant="8" id="mS1-Jf-PIE"/>
                             <constraint firstItem="BIb-TI-mZu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="4" id="o5x-HY-TtS"/>
                             <constraint firstAttribute="trailing" secondItem="BIb-TI-mZu" secondAttribute="trailing" constant="4" id="w3d-OH-jga"/>
                         </constraints>
@@ -50,6 +70,7 @@
                     </view>
                     <connections>
                         <outlet property="board" destination="BIb-TI-mZu" id="jUf-Lv-8OU"/>
+                        <outlet property="indicatorView" destination="pgn-cR-ZTS" id="Brg-BE-grm"/>
                         <outlet property="playerLabel" destination="GKL-Qj-Coa" id="PsN-ye-DST"/>
                         <outlet property="turnLabel" destination="4Dk-xz-fln" id="gcx-0Z-qvi"/>
                     </connections>

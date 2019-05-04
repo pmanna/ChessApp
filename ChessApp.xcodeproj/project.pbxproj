@@ -24,6 +24,7 @@
 		D8F29A2C227D9E3800EF5341 /* King.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F29A27227D9E3700EF5341 /* King.swift */; };
 		D8F29A2D227D9E3800EF5341 /* Queen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F29A28227D9E3800EF5341 /* Queen.swift */; };
 		D8F29A44227DD9E500EF5341 /* MicroMax.c in Sources */ = {isa = PBXBuildFile; fileRef = D8F29A43227DD9E500EF5341 /* MicroMax.c */; };
+		D8F29A46227E169600EF5341 /* SimpleBluetoothIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F29A45227E169600EF5341 /* SimpleBluetoothIO.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		D8F29A41227DD9E300EF5341 /* ChessApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ChessApp-Bridging-Header.h"; sourceTree = "<group>"; };
 		D8F29A42227DD9E500EF5341 /* MicroMax.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MicroMax.h; sourceTree = "<group>"; };
 		D8F29A43227DD9E500EF5341 /* MicroMax.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = MicroMax.c; sourceTree = "<group>"; };
+		D8F29A45227E169600EF5341 /* SimpleBluetoothIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleBluetoothIO.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 				D7A7F3B8207528AF007C3646 /* AppDelegate.swift */,
 				D8F29A43227DD9E500EF5341 /* MicroMax.c */,
 				D8F29A42227DD9E500EF5341 /* MicroMax.h */,
+				D8F29A45227E169600EF5341 /* SimpleBluetoothIO.swift */,
 				D7A7F3D62077C8EA007C3646 /* Controller */,
 				D7A7F3D72077C8FF007C3646 /* Modal */,
 				D7955FF8207E0EE700542083 /* ChessPiece */,
@@ -207,6 +210,7 @@
 				D7A7F3D120753C26007C3646 /* Game.swift in Sources */,
 				D8F29A29227D9E3800EF5341 /* Knight.swift in Sources */,
 				D7A7F3B9207528AF007C3646 /* AppDelegate.swift in Sources */,
+				D8F29A46227E169600EF5341 /* SimpleBluetoothIO.swift in Sources */,
 				D7A7F3D32077AA43007C3646 /* GameVC.swift in Sources */,
 				D7A7F3CF20753604007C3646 /* BoardSpace.swift in Sources */,
 				D8F29A2B227D9E3800EF5341 /* Bishop.swift in Sources */,
